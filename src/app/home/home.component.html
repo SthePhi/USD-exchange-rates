@@ -1,10 +1,10 @@
 <div style="padding: 13px;">
-  <mat-spinner *ngIf="currencies.length === 0"></mat-spinner>
+ <!-- <mat-spinner *ngIf="currencies.toString()"></mat-spinner>-->
 
   <mat-card style="margin-top: 11px;" >
     <mat-card-header>
       <mat-card-title><h4>USD VS OTHER CURRENCIES</h4></mat-card-title>
-      <mat-card-subtitle>{{currencies | json}}</mat-card-subtitle>
+      <mat-card-subtitle>{{currencies}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <ul>

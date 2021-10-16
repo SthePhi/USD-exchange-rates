@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CurrencyService} from "../currency.service";
+import {Currency} from "../currency";
 
 @Component({
   selector: 'app-home',
@@ -13,10 +14,13 @@ export class HomeComponent implements OnInit {
   constructor(private currencyService: CurrencyService) { }
 
   ngOnInit(): void {
-    this.currencyService.getCurrency().subscribe((data:any)=>{
-      console.log(data);
+    this.currencyService.getCurrency().subscribe((data:Currency)=>{
+      // console.log(data);
+
       this.currencies = data;
-      console.log(data);
+      switch (this.currencies) {
+      }
+      console.log(this.currencies.constructor);
     })
   }
 
