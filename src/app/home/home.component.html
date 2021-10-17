@@ -1,17 +1,16 @@
 <div style="padding: 13px;">
  <!-- <mat-spinner *ngIf="currencies.toString()"></mat-spinner>-->
 
-  <mat-card style="margin-top: 11px;" >
+  <mat-card class = "card" style="margin-top: 11px;" style="width: 370px;">
     <mat-card-header>
       <mat-card-title><h4>USD VS OTHER CURRENCIES</h4></mat-card-title>
-      <mat-card-subtitle>{{zar | json}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <ul>
-        <li>ZAR  :  {{zar | currency}}</li>
-        <li>BDT  :  </li>
-        <li>PKR  :  </li>
-        <li>INR  :  </li>
+        <li>ZAR  :  {{zar | currency:'ZAR': 'symbol'}}</li>
+        <li>BDT  :  {{bdt | currency:'BDT': 'symbol'}}</li>
+        <li>PKR  :  {{pkr | currency:'PKR': 'symbol'}}</li>
+        <li>INR  :  {{inr | currency:'INR': 'symbol'}}</li>
       </ul>
     </mat-card-content>
     <mat-card-actions>
